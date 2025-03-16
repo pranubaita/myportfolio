@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+
+    <header>
+        <h1>Admin Panel</h1>
+        <p>Add new achievements or projects</p>
+    </header>
+
+    <section>
+        <form method="POST">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="tags">Tags (comma-separated):</label>
+            <input type="text" id="tags" name="tags" placeholder="e.g. Python, Flask, MongoDB" required>
+
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" placeholder="e.g. 2023" required>
+
+            <label for="image_url">Image URL (optional):</label>
+            <input type="text" id="image_url" name="image_url" placeholder="e.g. https://example.com/image.jpg">
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="project">Project</option>
+                <option value="achievement">Achievement</option>
+            </select>
+
+            <button type="submit">Add</button>
+        </form>
+    </section>
+</body>
+</html>
